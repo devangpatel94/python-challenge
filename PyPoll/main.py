@@ -28,7 +28,7 @@ with open(csvpath, 'r') as csvfile:
 
     c4 = "O'Tooley"
 
-    kahn_votes = 0
+    khan_votes = 0
 
     correy_votes = 0
 
@@ -40,7 +40,7 @@ with open(csvpath, 'r') as csvfile:
 
         if row[2] == c1:
 
-            kahn_votes = kahn_votes + 1
+            khan_votes = khan_votes + 1
    
 
         if row[2] == c2:
@@ -56,7 +56,7 @@ with open(csvpath, 'r') as csvfile:
 
             otoo_votes = otoo_votes + 1
 
-    pkhan = (kahn_votes/row_count)*100
+    pkhan = (khan_votes/row_count)*100
 
     percent_khan = round(pkhan,2)
 
@@ -78,7 +78,7 @@ with open(csvpath, 'r') as csvfile:
 
    
 
-    d = {"Kahn": percent_khan, "Correy": percent_correy, "Li": percent_li, "O'Tooley": percent_otoo}
+    d = {"Khan": percent_khan, "Correy": percent_correy, "Li": percent_li, "O'Tooley": percent_otoo}
 
     
 
@@ -92,7 +92,7 @@ with open(csvpath, 'r') as csvfile:
 
     print(f'Total votes:{row_count}')
 
-    print(f'Kahn:      {percent_khan} % ({kahn_votes})')
+    print(f'Khan:      {percent_khan} % ({khan_votes})')
 
     print(f'Correy:    {percent_correy} % ({correy_votes})')
 
@@ -114,7 +114,7 @@ with open(csvpath, 'r') as csvfile:
 
     f.write(f'Total votes:{row_count}\r\n')
 
-    f.write(f'Kahn:      {percent_khan} % ({kahn_votes})\r\n')
+    f.write(f'Khan:      {percent_khan} % ({khan_votes})\r\n')
 
     f.write(f'Correy:    {percent_correy} % ({correy_votes})\r\n')
 
