@@ -120,7 +120,7 @@ with open(csvpath, 'r') as csvfile:
 
     f.write(f'Li:        {percent_li} % ({li_votes})\r\n')
 
-    f.write(f"O'Tooley:  {percent_ot} % ({otoo_votes})\r\n")
+    f.write(f"O'Tooley:  {percent_otoo} % ({otoo_votes})\r\n")
 
     f.write("-------------------------------------------------------\r\n")
 
