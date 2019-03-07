@@ -2,7 +2,6 @@ import os
 
 import csv
 
-
 months = []     
 
 profitlist = []      
@@ -11,14 +10,9 @@ changelist = []
 
 profitsum = 0
 
-
-
 csvpath = os.path.join('budget_data.csv')
 
-
 with open(csvpath, 'r') as csvfile:
-
-
 
     data = csv.reader(csvfile, delimiter=',')
 
@@ -27,53 +21,38 @@ with open(csvpath, 'r') as csvfile:
     for row in data:                           
 
         rowcount = 1 + sum(1 for row in data) 
-
       
 with open(csvpath, 'r') as csvfile:
-
-    
 
     data = csv.reader(csvfile, delimiter=',')
 
     headerline = next(data)
-
-   
 
     for row in data:
 
         profitsum += int(row[1])
 
-    
-
 with open(csvpath, 'r') as csvfile:
-
-    
 
     data = csv.reader(csvfile, delimiter=',')
 
     headerline = next(data)
 
-    
 
     for row in data:                    
 
         months.append(row[0])           
 
         profitlist.append(float(row[1]))
-
-        
+ 
 
     for i in range(1, len(profitlist)):
 
         change = profitlist[i] - profitlist[i-1] 
 
         changelist.append(change)
-
-    
-
     x = len(changelist) 
-
-    
+ 
 
     avgchange = sum(changelist) / x
 
@@ -96,7 +75,6 @@ with open(csvpath, 'r') as csvfile:
     monthminprofit = months[monthminid]
 
 
-
     print("   Financial Analysis") 
 
     print("--------------------------------------------------------------------------------")
@@ -110,13 +88,7 @@ with open(csvpath, 'r') as csvfile:
     print(f'Greatest increase in Profits:       {monthmaxprofit}  ${maxprofits}')   
 
     print(f'Greatest decrease in Profits:       {monthminprofit}  ${minprofits}')   
-
-    
-
-    
-
-    
-
+ 
     f= open("PyBank.txt","w+")
 
     f.write("Financial Analysis\r\n") 
