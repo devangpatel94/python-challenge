@@ -72,7 +72,7 @@ with open(csvpath, 'r') as csvfile:
 
    
 
-    potoo = (ot_votes/row_count)*100
+    potoo = (otoo_votes/row_count)*100
 
     percent_otoo = round(potoo,2)
 
@@ -98,7 +98,7 @@ with open(csvpath, 'r') as csvfile:
 
     print(f'Li:        {percent_li} % ({li_votes})')
 
-    print(f"O'Tooley:  {percent_otoo} % ({ot_votes})")
+    print(f"O'Tooley:  {percent_otoo} % ({otoo_votes})")
 
     print("---------------------------------------------------------")
 
